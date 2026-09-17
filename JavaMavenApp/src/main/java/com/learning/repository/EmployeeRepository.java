@@ -18,4 +18,8 @@ public class EmployeeRepository {
 	public Employee findById(int id) {
 		return employees.get(id);
 	}
+	
+	public void deleteById(int id) {
+		employees.remove(id);
+	}
 }

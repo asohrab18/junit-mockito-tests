@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 class UserServiceTest {
 
 	@Test
-	void shouldThrowExeptionWhenAgeIsNegativeNumber() {
+	void should_throw_exeption_when_age_is_negative() {
 
 		assertThrows(IllegalArgumentException.class, () -> {
 			UserService user = new UserService();
@@ -18,7 +18,7 @@ class UserServiceTest {
 	}
 
 	@Test
-	void shouldThrowExeptionWhenAgeIsZero() {
+	void should_throw_exeption_when_age_is_zero() {
 
 		assertThrows(IllegalArgumentException.class, () -> {
 			UserService user = new UserService();
@@ -28,14 +28,14 @@ class UserServiceTest {
 	}
 
 	@Test
-	void shouldGetMinorWhenAgeLessThan18() {
+	void should_get_minor_when_age_less_than_18() {
 		UserService user = new UserService();
 		String actual = user.getUserType(17);
 		assertEquals("MINOR", actual);
 	}
 
 	@Test
-	void shouldGetAdultWhenAgeEqualTo18() {
+	void should_get_adult_when_age_is_18() {
 		// Given
 		UserService user = new UserService();
 
@@ -47,7 +47,7 @@ class UserServiceTest {
 	}
 
 	@Test
-	void shouldGetAdultWhenAgeGreaterThan18() {
+	void should_get_adult_when_age_greater_than_18() {
 		// Given
 		UserService user = new UserService();
 

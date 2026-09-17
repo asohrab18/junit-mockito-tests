@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 class BankAccountServiceTest {
 
 	@Test
-	void should_Withdraw_Money_And_Reduce_Balance() {
+	void should_withdraw_money_and_reduce_balance() {
 		// GIVEN
 		BankAccountService bas = new BankAccountService(1000d);
 
@@ -20,7 +20,7 @@ class BankAccountServiceTest {
 	}
 
 	@Test
-	void should_Throw_Exception_When_Withdrawing_Money_More_Than_Balance() {
+	void should_throw_exception_when_withdrawing_money_more_than_balance() {
 
 		assertThrows(IllegalArgumentException.class, () -> {
 			BankAccountService bas = new BankAccountService(100d);

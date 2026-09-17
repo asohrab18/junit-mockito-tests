@@ -11,10 +11,14 @@ public class EmployeeService {
 		this.repository = repository;
 	}
 
-	public String getUserName(int id) {
+	public String getEmployeeName(int id) {
 
 		Employee employee = repository.findById(id);
 
 		return employee.getName();
+	}
+	
+	public void deleteEmployee(int id) {
+	    repository.deleteById(id);
 	}
 }
